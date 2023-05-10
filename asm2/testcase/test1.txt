@@ -1,0 +1,6 @@
+INSERT qi7aH1 (string,number,string)->number false
+BEGIN
+INSERT kuVA number true
+ASSIGN kuVA qi7aH1('o9',kuVA,' v')
+INSERT gRb number true
+ASSIGN qi7aH1 kuVA

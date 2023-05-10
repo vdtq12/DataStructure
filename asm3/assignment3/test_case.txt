@@ -1,0 +1,92 @@
+test1
+LINEAR 19 7
+INSERT a 3
+INSERT b
+ASSIGN a b
+output: TypeMismatch
+
+test2
+LINEAR 19 1
+INSERT x
+INSERT sum 2
+ASSIGN x 1
+ASSIGN x sum(5,x,2)
+output: TypeMismatch
+
+test3
+LINEAR 19 1
+INSERT x 2
+INSERT y
+ASSIGN y 1
+CALL x(1,1)
+ASSIGN y x(z,1)
+output: Undeclared
+
+test4
+LINEAR 19 1
+INSERT a
+BEGIN
+INSERT a 5
+output: InvalidDeclaration
+
+test5
+LINEAR 19 1
+INSERT x 2
+INSERT y
+ASSIGN y x(2)
+TypeMismatch
+
+test6
+LINEAR 19 1
+INSERT a 2
+INSERT b 2
+INSERT x 2
+ASSIGN x a(b,x)
+TypeMismatch
+
+test7
+LINEAR 19 1
+INSERT b2
+INSERT rj
+ASSIGN rj 1
+output: 0 1 1
+
+test8
+LINEAR 19 1
+INSERT a 2
+BEGIN
+INSERT b
+INSERT a
+ASSIGN a 3
+ASSIGN b a(2,3)
+END
+
+test9
+LINEAR 50 3
+INSERT x
+ASSIGN x 2
+INSERT sum 2
+ASSIGN x sum(2,2)
+CALL sum(a,b)
+Undeclared
+
+test10
+LINEAR 50 3
+INSERT x
+LINEAR 50 3
+INSERT x
+InvalidDeclaration
+
+test11
+LINEAR 50 3
+INSERT x
+INSERT y 2
+ASSIGN x y(a,x)
+Undeclared
+
+test12
+LINEAR 50 3
+INSERT x
+ASSIGN x 1
+ASSIGN x 'abc'
+TypeMismatch

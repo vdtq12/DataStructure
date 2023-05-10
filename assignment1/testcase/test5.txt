@@ -1,0 +1,13 @@
+INSERT x 'number'
+INSERT _y string
+INSERT x string
+ASSIGN r_
+ASSIGN x '09 k sda'
+ASSIGN ew fd_nw
+ASSIGN e 123a
+ASSIGN e 12.3
+ASSIGN e 434
+BEGINB
+END
+LOOK    UP x
+RPRINT
